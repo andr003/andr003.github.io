@@ -67,6 +67,7 @@ a, .contact-link {
     color: var(--accent-primary);
     text-decoration: none;
     transition: color 0.3s ease;
+    
 }
 
 a:hover, .contact-link:hover {
@@ -136,7 +137,7 @@ strong {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .main {
-        max-width: 95%;
+        max-width: 85%;
         padding: 1rem;
     }
 

@@ -51,6 +51,24 @@ body {
     margin-bottom: 3rem;
 }
 
+#certification a, li {
+    color: var(--text-primary);
+}
+
+#certification a:visited, li:visited, strong:visited{
+    color: var(--text-secondary);
+}
+
+
+
+.strong-normal {
+    color: var(--accent-secondary);
+}
+
+.strong-visited {
+    color: #ca500a;
+}
+
 h2, h3{
     color: var(--accent-secondary);
     border-bottom: 2px solid var(--text-secondary);
@@ -127,9 +145,6 @@ li {
     margin-bottom: 0.5rem;
 }
 
-strong {
-    color: var(--accent-secondary);
-}
 
 
 .navbar-toggler, .navbar-toggler-icon {

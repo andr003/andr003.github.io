@@ -73,6 +73,16 @@
                     <li><strong>Continuous Learning:</strong> Dedicated to staying updated with new technologies and improving skills through online courses and hands-on projects.</li>
                 </ul>
             </section>
+
+            <section id="certification">
+                <h2>My Certification</h2>
+                <ul class="justify">
+                    <li><a href="https://coursera.org/share/2198fe0fe29ee9247ed3b79bc9c49503" target="_blank">Introduction to <strong class="strong-normal">Front-End Development</strong> <strong class="strong-normal">(Coursera)</strong></a></li>
+                    <li><a href="https://coursera.org/share/70ebe8f18f3b7462638a821f9fe1ad07" target="_blank">Introduction to <strong class="strong-normal">Back-End Development</strong> <strong class="strong-normal">(Coursera)</strong></a></li>
+                    <li><a href="https://coursera.org/share/6a126805d7bd0f670ca5ed12c42203e2" target="_blank">Programming with <strong class="strong-normal">JavaScript</strong> <strong class="strong-normal">(Coursera)</strong></a></li>
+                    <li><a href="https://coursera.org/share/65414ea4487db086b61537c8de67b809" target="_blank"><strong class="strong-normal">Version Control</strong> <strong class="strong-normal">(Coursera)</strong></a></li>
+                </ul>
+            </section>
             
             <section id="projects">
                 <h2>Projects 🛠️</h2>
@@ -101,6 +111,8 @@
                     <li>GitHub: <a href="https://github.com/andr003" target="_blank" class="contact-link">github.com/andr003</a></li>
                 </ul>
             </section>
+
+            
         </div>
     </main>
     
@@ -109,5 +121,13 @@
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('strong').forEach(element => {
+            element.addEventListener('click', ()=> {
+                element.classList.remove('strong-normal');
+                element.classList.add("strong-visited");
+            })
+        })
+    </script>
 </body>
 </html>

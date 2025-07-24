@@ -4,6 +4,57 @@ $(function () {
         $(this).addClass("visited");
     });
 
+    const carouselItems = $(".carousel-item");
+    const dots = $(".dot");
+    let currentIndex = 0;
+    const totalItems = carouselItems.length; // Corrected "lenght" to "length"
+
+    // Funzione che aggiorna la visualizzazione del carosello
+    function updateCarousel() {
+        carouselItems.removeClass("active").addClass("hidden");
+        carouselItems.eq(currentIndex).removeClass("hidden").addClass("active");
+        // Aggiunge animazione di fade-in all'immagine attiva cercando dentro tutti gli elemnti figli e discendenti
+        carouselItems.eq(currentIndex).find("img").css("opacity", 0); // Imposta l'opacità a 0 per l'immagine attiva
+        carouselItems.eq(currentIndex).find("img").animate({ opacity: 1 }, 1000); // Animazione di fade-in in 1 secondo 
+        
+
+        dots.removeClass("active-dot"); // Anche se la prima volta non succede niente, è per assicurarsi che tutto viene resettato
+        dots.eq(currentIndex).addClass("active-dot"); // Corrected "ed" to "eq"
+    }
+
+    // Inizializziamo il carosello
+    updateCarousel();
+
+    $(".navbar a[href='#carousel'], .cta[data-target='#carousel']").on("click", function () {
+        updateCarousel(); // Aggiorna il carosello quando si clicca sul link della navbar
+    });
+    
+
+    // Gestione del pulsante "successivo"
+    $(".carousel-next").on("click", function () {
+        // Tramite il modulo ci assicuriamo che currentIndex sia sempre all'interno del range corretto
+        currentIndex = (currentIndex + 1) % totalItems;
+        // Dopo aver cliccato si aggiorna il carosello
+        updateCarousel();
+    });
+
+    // Gestione del pulsante "precedente"
+    $(".carousel-prev").on("click", function () { // Corrected duplicate ".carousel-next" to ".carousel-prev"
+        // Calcolo per avere il numero intero corretto
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarousel();
+    });
+
+    //Gestione dei click sui punti del carosello
+    dots.on("click", function () {
+        // Prendiamo l'indice del punto cliccato
+        const index = dots.index(this);
+        // Aggiorniamo l'indice corrente
+        currentIndex = index;
+        // Aggiorniamo il carosello 
+        updateCarousel();
+    });
+
     // ======= gestione sezioni in modo dinamico =======
     //Nasconde tutte le sezioni tranne la prima
     $(".main-content section").addClass("hidden");
@@ -34,47 +85,7 @@ $(function () {
             scrollTop: $(target).offset().top}, 500);
     });
 
-    const carouselItems = $(".carousel-item");
-    const dots = $(".dot");
-    let currentIndex = 0;
-    const totalItems = carouselItems.length; // Corrected "lenght" to "length"
-
-    // Funzione che aggiorna la visualizzazione del carosello
-    function updateCarousel() {
-        carouselItems.removeClass("active").addClass("hidden");
-        carouselItems.eq(currentIndex).removeClass("hidden").addClass("active");
-
-        dots.removeClass("active-dot"); // Anche se la prima volta non succede niente, è per assicurarsi che tutto viene resettato
-        dots.eq(currentIndex).addClass("active-dot"); // Corrected "ed" to "eq"
-    }
-
-    // Inizializziamo il carosello
-    updateCarousel();
-
-    // Gestione del pulsante "successivo"
-    $(".carousel-next").on("click", function () {
-        // Tramite il modulo ci assicuriamo che currentIndex sia sempre all'interno del range corretto
-        currentIndex = (currentIndex + 1) % totalItems;
-        // Dopo aver cliccato si aggiorna il carosello
-        updateCarousel();
-    });
-
-    // Gestione del pulsante "precedente"
-    $(".carousel-prev").on("click", function () { // Corrected duplicate ".carousel-next" to ".carousel-prev"
-        // Calcolo per avere il numero intero corretto
-        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-        updateCarousel();
-    });
-
-    //Gestione dei click sui punti del carosello
-    dots.on("click", function () {
-        // Prendiamo l'indice del punto cliccato
-        const index = dots.index(this);
-        // Aggiorniamo l'indice corrente
-        currentIndex = index;
-        // Aggiorniamo il carosello 
-        updateCarousel();
-    });
+    
 
     // Gestione del click sull'immagine attiva in quel momento, che apre il link esterno
     $(".carousel-track").on("click", ".carousel-item.active", function () {

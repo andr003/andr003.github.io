@@ -186,6 +186,11 @@ a.visited:hover {
     transition: opacity 0.5s;
 }
 
+.carousel-image {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
 .carousel-item.active {
     opacity: 1; /* La slide attiva è visibile */
     position: relative; /* Sposta l'elemento attivo nel flusso normale per occupare spazio */

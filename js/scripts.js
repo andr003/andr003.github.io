@@ -36,6 +36,16 @@ $(function () {
         updateCarousel();
     });
 
+    //Gestione dei click sui punti del carosello
+    dots.on("click", function () {
+        // Prendiamo l'indice del punto cliccato
+        const index = dots.index(this);
+        // Aggiorniamo l'indice corrente
+        currentIndex = index;
+        // Aggiorniamo il carosello 
+        updateCarousel();
+    });
+
     // Gestione del click sull'immagine attiva in quel momento, che apre il link esterno
     $(".carousel-track").on("click", ".carousel-item.active", function () {
         const link = $(this).data("link");

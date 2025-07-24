@@ -239,3 +239,18 @@ a.visited:hover {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+#contacts {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}

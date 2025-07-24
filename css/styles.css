@@ -268,10 +268,22 @@ a.visited:hover {
 
 
 /* ========= Stile per il footer ======== */
-#footer {
+.footer-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
     background-color: var(--primary-color);
     color: var(--white-color);
     padding: 10px;
     text-align: center;
-    margin-top: 20px;
+    margin: 0;
+    z-index: 1000; /* Assicura che il footer sia sempre visibile sopra altri contenuti */
+}
+
+.footer-wrapper footer {
+    margin: 0 auto;
+    max-width: 800px; /* Limita la larghezza del footer */
+    background-color: transparent;
 }

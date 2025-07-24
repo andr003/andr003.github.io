@@ -1,0 +1,153 @@
+:root {
+    --primary-color: #af2d01;
+    --secondary-color: #e7e300;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --white-color: #ffffff;
+    --dark-color: #000000;
+    --accent-color: #0076aa;
+    --accent-color-hover: #005f8a;
+    --accent-color-visited: #005f8a;
+
+    --animation-in-duration: 0.5s;
+    --animation-out-duration: 0.8s;
+}
+
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Stile generale del corpo */
+body {
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header */
+.header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar nav a {
+    margin: 0 10px;
+    color: var(--white-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Sezioni */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Titoli delle sezioni */
+section h2 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--text-color);
+    color: var(--white-color);
+    margin-top: 20px;
+}
+
+/* Stile base per i link */
+a {
+    color: var(--accent-color);
+    padding: 3px 5px;
+    border-radius: 15px;
+    transition: all var(--animation-in-duration) ease;
+    text-decoration: none; /* Assicura che non ci siano sottolineature */
+}
+
+/* Hover */
+a:hover {
+    color: var(--accent-color-hover);
+    background-color: var(--secondary-color);
+    transition: all var(--animation-out-duration) ease;
+}
+
+/* Stile per i link visitati */
+.visited {
+    color: var(--accent-color-visited);
+}
+
+/* Hover sui link visitati */
+a.visited:hover {
+    background-color: inherit; /* Rimuove lo sfondo */
+    color: inherit; /* Rimuove il colore */
+    cursor: default; /* Cambia il cursore per indicare che non è interattivo */
+}
+
+
+
+/* Stile navbar*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar nav a {
+    margin: 0 10px;
+    color: var(--white-color);
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: var(--background-color) 0.3s, color 0.3s;
+}
+.navbar nav a:hover {
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    transition: all var(--animation-in-duration) ease;
+}

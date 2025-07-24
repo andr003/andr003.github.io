@@ -25,7 +25,7 @@ $(function () {
     // Inizializziamo il carosello
     updateCarousel();
 
-    $(".navbar a[href='#carousel'], .cta[data-target='#carousel']").on("click", function () {
+    $(".navbar a[href='#projects'], .cta[data-target='#projects']").on("click", function () {
         updateCarousel(); // Aggiorna il carosello quando si clicca sul link della navbar
     });
     

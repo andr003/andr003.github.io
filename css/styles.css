@@ -47,6 +47,11 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra per separarla dal contenuto */
 }
 
+.navbar nav a:last-child {
+    margin-right: 60px; /* Aggiunge spazio a destra dell'ultimo link */
+}
+
+
 .main-content {
     margin-top: 60px; /* Regola il valore in base all'altezza della navbar */
 }

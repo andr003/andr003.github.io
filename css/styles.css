@@ -38,6 +38,7 @@ body {
     padding: 10px 20px;
 }
 
+
 /* Navbar sempre visibile */
 .navbar {
     position: fixed; /* Fissa la navbar in alto */
@@ -45,76 +46,49 @@ body {
     left: 0;
     width: 100%; /* Assicura che la navbar occupi tutta la larghezza */
     z-index: 1000; /* Porta la navbar in primo piano */
-    background-color: var(--primary-color); /* Mantiene il colore di sfondo */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra per separarla dal contenuto */
+    display: flex; /* Allinea gli elementi in orizzontale */
+    justify-content: space-between; /* Spazia il logo e i pulsanti */
+    align-items: center; /* Centra verticalmente gli elementi */
+    padding: 30px 20px;
+    background-color: var(--primary-color); /* Colore di sfondo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra */
+
 }
+
+.navbar .logo {
+    display: flex;
+    align-items: center; /* Centra verticalmente il logo e il testo */
+}
+
+.navbar .logo img {
+    height: 40px; /* Altezza del logo */
+    margin-right: 10px; /* Spazio tra il logo e il testo */
+}
+
+.navbar nav a {
+    margin: 0 10px; /* Spaziatura tra i pulsanti */
+    color: var(--white-color); /* Colore del testo */
+    font-weight: bold; /* Testo in grassetto */
+    padding: 10px 15px; /* Spaziatura interna dei pulsanti */
+    border-radius: 20px; /* Angoli arrotondati */
+    transition: background-color 0.3s, color 0.3s; /* Transizioni fluide */
+}
+
+.navbar nav a:hover {
+    color: var(--text-color); /* Colore del testo al passaggio del mouse */
+    background-color: var(--secondary-color); /* Sfondo al passaggio del mouse */
+}
+
+
 
 .navbar nav a:last-child {
     margin-right: 60px; /* Aggiunge spazio a destra dell'ultimo link */
 }
 
-.navbar .logo {
-    display: flex;
-    align-items: center;
-}
-
-.navbar .logo img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.navbar nav a {
-    margin: 0 10px;
-    color: var(--white-color);
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-
-
-.navbar nav a:hover {
-    color: var(--secondary-color);
-
-}
-
-
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-}
-
-.navbar .logo {
-    display: flex;
-    align-items: center;
-}
-.navbar .logo img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.navbar nav a {
-    margin: 0 10px;
-    color: var(--white-color);
-    font-weight: bold;
-    transition: color 0.3s;
-    padding: 10px 15px;
-    border-radius: 20px;
-    transition: var(--background-color) 0.3s, color 0.3s;
-}
-.navbar nav a:hover {
-    color: var(--text-color);
-    background-color: var(--secondary-color);
-    transition: all var(--animation-in-duration) ease;
-}
-
 /* ====== Contenuto principale ====== */
 
 .main-content {
-    margin-top: 60px; /* Regola il valore in base all'altezza della navbar */
+    margin-top: 120px; /* Regola il valore in base all'altezza della navbar */
 }
 
 
@@ -170,6 +144,7 @@ a.visited:hover {
     cursor: default; /* Cambia il cursore per indicare che non è interattivo */
 }
 
+
 /* ======= Stile carosello ======= */
 
 .carousel-wrapper {
@@ -195,6 +170,7 @@ a.visited:hover {
     width: 100%;
     height: auto;
 }
+
 .carousel-item.active {
     opacity: 1; /* La slide attiva è visibile */
     position: relative; /* Sposta l'elemento attivo nel flusso normale per occupare spazio */
@@ -210,6 +186,7 @@ a.visited:hover {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Adatta l'immagine al contenitore */
+    border-radius: 15px;
 }
 
 .carousel-item .caption {

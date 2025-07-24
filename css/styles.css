@@ -1,6 +1,7 @@
 :root {
     --primary-color: #af2d01;
     --secondary-color: #ffc900;
+    --secondary-color-hover: #e9a505;
     --text-color: #333;
     --background-color: #f9f9f9;
     --white-color: #ffffff;
@@ -23,14 +24,14 @@
     font-family: 'Poppins', Arial, sans-serif;
 }
 
-/* Stile generale del corpo */
+/* ====== Stile generale ======= */
 body {
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
-/* Header */
+/* ======= Header Section ======*/
 .header {
     background-color: var(--primary-color);
     color: var(--white-color);
@@ -52,11 +53,6 @@ body {
     margin-right: 60px; /* Aggiunge spazio a destra dell'ultimo link */
 }
 
-
-.main-content {
-    margin-top: 60px; /* Regola il valore in base all'altezza della navbar */
-}
-
 .navbar .logo {
     display: flex;
     align-items: center;
@@ -74,11 +70,54 @@ body {
     transition: color 0.3s;
 }
 
+
+
 .navbar nav a:hover {
     color: var(--secondary-color);
+
 }
 
-/* Sezioni */
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar nav a {
+    margin: 0 10px;
+    color: var(--white-color);
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: var(--background-color) 0.3s, color 0.3s;
+}
+.navbar nav a:hover {
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    transition: all var(--animation-in-duration) ease;
+}
+
+/* ====== Contenuto principale ====== */
+
+.main-content {
+    margin-top: 60px; /* Regola il valore in base all'altezza della navbar */
+}
+
+
 section {
     padding: 20px;
     margin: 20px auto;
@@ -131,43 +170,7 @@ a.visited:hover {
     cursor: default; /* Cambia il cursore per indicare che non è interattivo */
 }
 
-
-
-/* Stile navbar*/
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-}
-
-.navbar .logo {
-    display: flex;
-    align-items: center;
-}
-.navbar .logo img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.navbar nav a {
-    margin: 0 10px;
-    color: var(--white-color);
-    font-weight: bold;
-    transition: color 0.3s;
-    padding: 10px 15px;
-    border-radius: 20px;
-    transition: var(--background-color) 0.3s, color 0.3s;
-}
-.navbar nav a:hover {
-    color: var(--text-color);
-    background-color: var(--secondary-color);
-    transition: all var(--animation-in-duration) ease;
-}
-
-/* Stile carosello*/
+/* ======= Stile carosello ======= */
 
 .carousel-wrapper {
     position: relative;
@@ -221,6 +224,9 @@ a.visited:hover {
 
 .carousel-button {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--secondary-color);
@@ -228,6 +234,8 @@ a.visited:hover {
     border: none;
     padding: 10px;
     cursor: pointer;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     transition: background-color 0.3s ease;
     font-size: 30px;
@@ -266,6 +274,10 @@ a.visited:hover {
 }
 
 
+
+
+/* ======== Stile contatti ======== */
+
 #contacts {
     background-color: var(--background-color);
     padding: 20px;
@@ -273,6 +285,8 @@ a.visited:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
+/* ========= Stile per il footer ======== */
 #footer {
     background-color: var(--primary-color);
     color: var(--white-color);

@@ -4,6 +4,36 @@ $(function () {
         $(this).addClass("visited");
     });
 
+    // ======= gestione sezioni in modo dinamico =======
+    //Nasconde tutte le sezioni tranne la prima
+    $(".main-content section").addClass("hidden");
+    $("#home").removeClass("hidden");
+
+    //Gestione click sui pulsanti CTA
+    $(".cta").on("click", function () {
+        // Prende il target del pulsante cliccato
+        const target = $(this).data("target");
+        // Nasconde tutte le sezioni
+        $(".main-content section").addClass("hidden");
+        // Mostra la sezione corrispondente al target
+        $(target).removeClass("hidden");
+        $("html, body").animate({
+            scrollTop: $(target).offset().top}, 500); // Scorri alla sezione in modo fluido
+    });
+
+    // Gestione click sulla navbar
+    $(".navbar a").on("click", function (e) {
+        e.preventDefault(); // Previene il comportamento predefinito del link
+        const target = $(this).attr("href"); // Prende l'href del link
+        // Nasconde tutte le sezioni
+        $(".main-content section").addClass("hidden");
+        // Mostra la sezione corrispondente all'href del link
+        $(target).removeClass("hidden");
+        // Scorri alla sezione in modo fluido
+        $("html, body").animate({
+            scrollTop: $(target).offset().top}, 500);
+    });
+
     const carouselItems = $(".carousel-item");
     const dots = $(".dot");
     let currentIndex = 0;

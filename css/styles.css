@@ -91,6 +91,10 @@ body {
     margin-top: 120px; /* Regola il valore in base all'altezza della navbar */
 }
 
+/* Classe per nascondere elementi */
+.hidden {
+    display: none;
+}
 
 section {
     padding: 20px;

@@ -36,10 +36,19 @@ body {
     padding: 10px 20px;
 }
 
+/* Navbar sempre visibile */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed; /* Fissa la navbar in alto */
+    top: 0; /* Posiziona la navbar in cima alla pagina */
+    left: 0;
+    width: 100%; /* Assicura che la navbar occupi tutta la larghezza */
+    z-index: 1000; /* Porta la navbar in primo piano */
+    background-color: var(--primary-color); /* Mantiene il colore di sfondo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra per separarla dal contenuto */
+}
+
+.main-content {
+    margin-top: 60px; /* Regola il valore in base all'altezza della navbar */
 }
 
 .navbar .logo {

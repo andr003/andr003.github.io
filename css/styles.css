@@ -342,7 +342,6 @@ section#projects {
     position: relative;
     width: 100%;
     max-width: 800px;
-    overflow: hidden; /* nasconde gli elementi in eccesso */
     height: 450px; /* Altezza fissa */;
 }
 

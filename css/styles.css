@@ -165,7 +165,10 @@ button.cta:hover {
     background-color: var(--secondary-color); /* Sfondo al passaggio del mouse */
 }
 
-
+.navbar nav a.active-link {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
 
 .navbar nav a:last-child {
     margin-right: 60px; /* Aggiunge spazio a destra dell'ultimo link */

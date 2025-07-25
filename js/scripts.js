@@ -60,6 +60,17 @@ $(function () {
     $(".main-content section").addClass("hidden");
     $("#home").removeClass("hidden");
 
+    function setActiveNav(target) {
+        $(".navbar nav a").removeClass("active-link"); // Rimuove la classe "active-link" da tutti i link
+        // Aggiunge la classe "active-link" al link corrispondente al target
+        $(".navbar nav a").each(function () {
+            if ($(this).attr("href") === target) {
+                $(this).addClass("active-link");
+                console.log("Link attivo impostato per:", target);
+            }
+        });
+    }
+
     //Gestione click sui pulsanti CTA
     $(".cta").on("click", function () {
         // Prende il target del pulsante cliccato
@@ -68,6 +79,7 @@ $(function () {
         $(".main-content section").addClass("hidden");
         // Mostra la sezione corrispondente al target
         $(target).removeClass("hidden");
+        setActiveNav(target); // Imposta il link attivo nella navbar
         $("html, body").animate({
             scrollTop: $(target).offset().top}, 500); // Scorri alla sezione in modo fluido
     });
@@ -81,6 +93,7 @@ $(function () {
         // Mostra la sezione corrispondente all'href del link
         $(target).removeClass("hidden");
         // Scorri alla sezione in modo fluido
+        setActiveNav(target); // Imposta il link attivo nella navbar
         $("html, body").animate({
             scrollTop: $(target).offset().top}, 500);
     });

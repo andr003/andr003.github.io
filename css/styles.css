@@ -36,7 +36,8 @@
     --secondary-color: #ffc900;
     --secondary-color-hover: #e9a505;
     --text-color: #333;
-    --background-color: #f9f9f9;
+    --background-color: #f2f2f2;
+    --section-background-color: #efefef;
     --white-color: #ffffff;
     --grey-color: #878787;
     --dark-color: #000000;
@@ -191,8 +192,8 @@ section {
     max-width: 1000px;
     min-height: 400px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: var(--background-color);
+    box-shadow: 3px 6px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--section-background-color);
     padding: 80px 120px; 
     text-align: center;
     border-radius: 20px;
@@ -241,7 +242,7 @@ a.visited:hover {
 
 .home {
     padding: 50px 20px;
-    background-color: var(--background-color);
+    background-color: transparent;
     border-radius: 20px;
 }
 
@@ -403,6 +404,44 @@ footer {
 
 /* --- 6.1 Breakpoint max-width: 1024px --- */
 @media (max-width: 1024px) {
+    body {
+        font-size: 0.9rem; /* Riduce la dimensione del testo per schermi più piccoli */
+        /*Allineamento div al centro*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    /*contenitore principale piu stretto */
+    .main-content {
+        max-width: 90%;
+    }
+
+    section {
+        padding: 45px 150px; /* Riduce il padding per schermi più piccoli */
+    }
+    #home {
+        position: relative;
+    }
+
+    .btn-div {
+        position: static;
+        margin-top: 20px; /* Spazio sopra i pulsanti */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px; /* Spazio tra i pulsanti */
+    }
+     button.cta {
+        display: flex;
+        width: 80%;
+        height:50px;
+        max-width: 300px; /* Limita la larghezza massima del pulsante */
+        align-items: center;
+        justify-content: center;
+        
+     }
+
 }
 /* --- 6.2 Breakpoint max-width: 768px --- */
 @media (max-width: 768px) {

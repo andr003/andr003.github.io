@@ -1,4 +1,37 @@
+/* Legenda commenti */
+/* ===== Sezione Principale ===== */
+/* --- Sezione Secondaria --- */
+/* commento singolo */
+
+
+/* ===== Indice delle Sezioni =====
+ * 1. Legenda commenti
+ *    1.1 ===== Sezione Principale =====
+ *    1.2 --- Sezione Secondaria ---
+ * 2. Variabili CSS
+ *    2.1 Colori e variabili
+ *    2.2 Tipografia
+ * 3. Stile Generale
+ *    3.1 Reset di base
+ *    3.2 Corpo del documento (body)
+ * 4. Header Section
+ *    4.1 Pulsanti interattivi
+ *    4.2 Navbar
+ * 5. Contenuto Principale
+ *    5.1 link
+ *    5.2 Home section
+ *    5.3 Carosello
+ *    5.4 contatti
+ *    5.5 footer
+ * 6. Media Queries
+ *     6.1 Breakpoint max-width: 1024px
+ *     6.2 Breakpoint max-width: 768px
+ */
+
+
+/* ===== 2. Variabili CSS ====== */
 :root {
+    /* --- 2.1 Colori e variabili --- */
     --primary-color: #af2d01;
     --secondary-color: #ffc900;
     --secondary-color-hover: #e9a505;
@@ -14,7 +47,7 @@
     --animation-out-duration: 0.8s;
 
 
-    /* ====== Tipografia ====== */
+    /* --- 2.2 Tipografia --- */
     --font-primary: 'Poppins', Arial, sans-serif;
     --font-secondary: 'Roboto', Arial, sans-serif;
     --heading-size: 2.5rem;
@@ -23,7 +56,12 @@
     --button-padding: 15px 30px;
 }
 
-/* Reset di base */
+
+
+/* ====== 3. Stile generale ======= */
+
+
+/* 3.1 Reset di base */
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +70,7 @@
     font-family: var(--font-primary);
 }
 
-/* ====== Stile generale ======= */
+/* 3.2 Corpo del documento (body) */
 body {
     line-height: 1.6;
     background-color: var(--background-color);
@@ -40,12 +78,14 @@ body {
     color: var(--text-color);
 }
 
-/* ======= Header Section ======*/
+/* ===== 4. Header Section ===== */
 .header {
     background-color: var(--primary-color);
     color: var(--white-color);
     padding: 10px 20px;
 }
+
+
 
 h2 {
     font-family: var(--font-primary);
@@ -57,7 +97,7 @@ h2 {
 }
 
 
-/* ====== Pulsanti interattivi ====== */
+/* --- 4.1 Pulsanti interattivi --- */
 
 .btn-div {
     display: flex;
@@ -82,14 +122,7 @@ button.cta:hover {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-
-/* ====== Home section ====== */
-
-.home {
-    padding: 50px 20px;
-    background-color: var(--background-color);
-    border-radius: 20px;
-}
+/* --- 4.2 Navbar --- */
 
 /* Navbar sempre visibile */
 .navbar {
@@ -137,7 +170,8 @@ button.cta:hover {
     margin-right: 60px; /* Aggiunge spazio a destra dell'ultimo link */
 }
 
-/* ====== Contenuto principale ====== */
+
+/* ===== 5. Contenuto Principale ===== */
 
 .main-content {
     margin-top: 120px; /* Regola il valore in base all'altezza della navbar */;
@@ -170,16 +204,9 @@ section h2 {
     color: var(--primary-color);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: var(--text-color);
-    color: var(--white-color);
-    margin-top: 20px;
-}
+/* --- 5.1 link --- */
 
-/* Stile base per i link */
+/* Stile base */
 a {
     color: var(--accent-color);
     padding: 3px 5px;
@@ -208,7 +235,17 @@ a.visited:hover {
 }
 
 
-/* ======= Stile carosello ======= */
+
+
+/* --- 5.2 Home section --- */
+
+.home {
+    padding: 50px 20px;
+    background-color: var(--background-color);
+    border-radius: 20px;
+}
+
+/* --- 5.3 Stile carosello --- */
 
 .carousel-track {
     position: relative;
@@ -324,7 +361,7 @@ a.visited:hover {
 
 
 
-/* ======== Stile contatti ======== */
+/* --- 5.4 Stile contatti --- */
 
 #contacts {
     background-color: var(--background-color);
@@ -334,7 +371,7 @@ a.visited:hover {
 }
 
 
-/* ========= Stile per il footer ======== */
+/* --- 5.5 Stile per il footer --- */
 .footer-wrapper {
     position: fixed;
     bottom: 0;
@@ -349,8 +386,24 @@ a.visited:hover {
     z-index: 1000; /* Assicura che il footer sia sempre visibile sopra altri contenuti */
 }
 
-.footer-wrapper footer {
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--text-color);
+    color: var(--white-color);
+    margin-top: 20px;
     margin: 0 auto;
-    max-width: 800px; /* Limita la larghezza del footer */
+    max-width: 800px;
     background-color: transparent;
+}
+
+
+
+/* ===== 6. Media Queries ===== */
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+
 }

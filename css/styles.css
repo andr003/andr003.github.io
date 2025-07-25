@@ -401,9 +401,10 @@ footer {
 
 /* ===== 6. Media Queries ===== */
 
+/* --- 6.1 Breakpoint max-width: 1024px --- */
 @media (max-width: 1024px) {
 }
-
+/* --- 6.2 Breakpoint max-width: 768px --- */
 @media (max-width: 768px) {
 
 }

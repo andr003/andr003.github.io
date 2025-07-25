@@ -617,6 +617,36 @@ footer {
 
     }
 
+    #aboutme {
+        margin-bottom: 100px;
+        padding: 10px 70px 30px 0px;
+        max-width: 700px;
+        padding: 0 40px 20px 40px; /* Aggiunge padding orizzontale */
+    }
+    .container {
+        width: 100%;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: row; /* La foto e il testo si impilano su schermi piccoli */
+        align-items: center; /* Centra gli elementi quando sono impilati */
+        gap: 32px; /* Spazio tra gli elementi */
+    }
+
+    .content-wrapper img {
+        width: 300px; /* Larghezza fissa per l'immagine */
+        height: auto; /* Mantiene le proporzioni dell'immagine */
+        border-radius: 20px; /* Angoli arrotondati per l'immagine */
+    }
+
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        
+    }
+
 }
 
 

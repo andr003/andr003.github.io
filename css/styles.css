@@ -21,7 +21,7 @@
  * 5.1 link
  * 5.2 Home section
  * 5.3 Chi sono
- * 5.4 Carosello
+ * 5.4 Progetti
  * 5.5 contatti
  * 5.6 footer
  * 6. Media Queries
@@ -244,6 +244,41 @@ a.visited:hover {
 
 /* --- 5.2 Home section --- */
 
+#home {
+    /*Nessuno sfondo applicato*/
+    background-color: transparent;
+    box-shadow: none; /* Rimuove le ombre */
+    border-radius: 0; /* Rimuove gli angoli arrotondati */
+
+}
+.home p {
+    color: var(--white-color); /* Colore del testo */
+}
+.home h2 {
+    color: var(--white-color) ; /* Colore del titolo */
+    font-size: 2.5rem; /* Dimensione del titolo */
+    margin-bottom: 20px; /* Spazio sotto il titolo */
+}
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Posiziona il div dietro gli altri elementi */
+}
+
+.background {
+    background: linear-gradient(135deg, rgba(0, 118, 170, 0.8), rgba(21, 141, 192, 0.8)), 
+                url('../images/background-image-hero-section.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra per maggiore profondità */
+    filter: brightness(0.6) saturate(1.2); /* Aumenta la luminosità e la saturazione */
+}
+
+
+
 .home {
     padding: 50px 20px;
     background-color: transparent;
@@ -285,7 +320,13 @@ a.visited:hover {
     
 }
 
-/* --- 5.4 Stile carosello --- */
+/* --- 5.4 Stile Progetti (carosello) --- */
+
+section#projects {
+    padding: 20px 0 20px 0;
+    background-color: var(--section-background-color);
+
+}
 
 .carousel-track {
     position: relative;
@@ -401,16 +442,125 @@ a.visited:hover {
 
 
 
+
 /* --- 5.5 Stile contatti --- */
 
-#contacts {
-    background-color: var(--background-color);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background-color: var(--white-color);
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
+    border-left: 3px solid var(--primary-color);
+}
 
+.contact-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 5px 0;
+}
+
+.contact-info a {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+    color: var(--accent-color);
+    background-color: var(--secondary-color);
+}
+
+.cta-contact {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: var(--white-color);
+    border-radius: 15px;
+    border: 1px solid var(--grey-color);
+}
+
+.cta-contact p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.contact-cta {
+    background-color: var(--primary-color);
+    color: var(--white-color) !important;
+    border: none;
+    font-size: 1.1rem;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.contact-cta:hover {
+    background-color: var(--accent-color);
+}
+
+/* Media queries per la sezione contatti */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact-item {
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    #contacts {
+        padding: 40px 20px;
+    }
+}
 /* --- 5.6 Stile per il footer --- */
 .footer-wrapper {
     position: fixed;

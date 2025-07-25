@@ -10,8 +10,8 @@ $(function () {
     
     // --- Inizializzazione delle sezioni ---
     // Nasconde tutte le sezioni tranne la prima
-    $(".main-content section").addClass("hidden");
-    $("#home").removeClass("hidden");
+    $(".main-content section").addClass("section-hidden");
+    $("#home").removeClass("section-hidden");
     
     
     // --- Inizializzazione del carosello ---
@@ -48,12 +48,13 @@ $(function () {
         });
     }
     
-    // --- Funzione per mostrare una sezione specifica ---
+   // --- Funzione per mostrare una sezione specifica ---
     function showSection(target) {
-        // Nasconde tutte le sezioni
-        $(".main-content section").addClass("hidden");
-        // Mostra la sezione corrispondente al target
-        $(target).removeClass("hidden");
+        // Nasconde tutte le sezioni con i loro contenuti
+        $(".main-content section").addClass("section-hidden");
+        // Mostra la sezione corrispondente al target con tutti i suoi contenuti
+        $(target).removeClass("section-hidden");
+        
         // Imposta il link attivo nella navbar
         setActiveNav(target);
         // Scorri alla sezione in modo fluido

@@ -21,7 +21,7 @@
  * 5.1 link
  * 5.2 Home section
  * 5.3 Chi sono
- * 5.4 Progetti
+ * 5.4 Progetti (carosello)
  * 5.5 contatti
  * 5.6 footer
  * 6. Media Queries
@@ -182,9 +182,13 @@ button.cta:hover {
     margin-top: 120px; /* Regola il valore in base all'altezza della navbar */;
 }
 
-/* Classe per nascondere elementi */
-.hidden {
-    display: none;
+/* Classe per nascondere una sezione e tutti i suoi contenuti */
+.section-hidden {
+    display: none !important;
+}
+
+.section-hidden * {
+    display: none !important;
 }
 
 section {
@@ -325,11 +329,13 @@ a.visited:hover {
 section#projects {
     padding: 20px 0 20px 0;
     background-color: var(--section-background-color);
+    min-height: 600px;
 
 }
 
 .carousel-track {
     position: relative;
+    height: 450px; /* Altezza fissa per il carosello */
 }
 
 .carousel-wrapper {
@@ -337,6 +343,7 @@ section#projects {
     width: 100%;
     max-width: 800px;
     overflow: hidden; /* nasconde gli elementi in eccesso */
+    height: 450px; /* Altezza fissa */;
 }
 
 .carousel-item {
@@ -347,13 +354,17 @@ section#projects {
     width: 100%;
     height: 100%;
     opacity: 0; /* Tutte le slide sono nascoste per default */
+    display: flex;
+    flex-direction: column; /* Impila gli elementi verticalmente */
+    justify-content: center;
 }
 
 .carousel-image {
     overflow: hidden;
     width: 100%;
-    height: auto;
+    height: 300px; /* Altezza fissa per l'immagine */
     border-radius: 20px;
+    flex-shrink: 0; /* Impedisce che l'immagine si riduca */
     
 }
 
@@ -363,19 +374,16 @@ section#projects {
     cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
 }
 
-
-
-
 .carousel-item.hidden {
     opacity: 0; /* Elemento nascosto */
     pointer-events: none; /* Disabilita interazioni con il mouse per elementi nascosti */
 }
 
 .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Adatta l'immagine al contenitore */
+    object-fit: contain; /* Mantiene le proporzioni dell'immagine */
     border-radius: 15px;
+    width: 600px;
+    height: 300px;
 }
 
 .carousel-item .caption {
@@ -445,7 +453,24 @@ section#projects {
 
 /* --- 5.5 Stile contatti --- */
 
+section#contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -460,7 +485,7 @@ section#projects {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 25px;
+    padding: 0 10px 5px 10px;
     background-color: var(--white-color);
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -511,7 +536,6 @@ section#projects {
 
 .cta-contact {
     text-align: center;
-    margin-top: 50px;
     padding: 30px;
     background-color: var(--white-color);
     border-radius: 15px;
@@ -537,7 +561,7 @@ section#projects {
 }
 
 .contact-cta:hover {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color-hover);
 }
 
 /* Media queries per la sezione contatti */

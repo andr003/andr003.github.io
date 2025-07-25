@@ -563,27 +563,6 @@ section#contacts {
     background-color: var(--secondary-color-hover);
 }
 
-/* Media queries per la sezione contatti */
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .contact-item {
-        padding: 20px;
-        gap: 15px;
-    }
-    
-    .contact-icon {
-        width: 45px;
-        height: 45px;
-    }
-    
-    #contacts {
-        padding: 40px 20px;
-    }
-}
 /* --- 5.6 Stile per il footer --- */
 .footer-wrapper {
     position: fixed;
@@ -616,45 +595,24 @@ footer {
 
 /* --- 6.1 Breakpoint max-width: 1024px --- */
 @media (max-width: 1024px) {
-    body {
-        font-size: 0.9rem; /* Riduce la dimensione del testo per schermi più piccoli */
-        /*Allineamento div al centro*/
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    /*contenitore principale piu stretto */
-    .main-content {
-        max-width: 90%;
+    #home h2 {
+        font-size: 60px; /* Riduce la dimensione del titolo */
+        white-space: nowrap; /* Impedisce il ritorno a capo, testo in unica riga */
     }
 
-    section {
-        padding: 45px 150px; /* Riduce il padding per schermi più piccoli */
+    .home p {
+        font-size: 1.5rem; /* Riduce la dimensione del testo */
+        padding: 0 20px; /* Aggiunge padding orizzontale */
     }
-    #home {
-        position: relative;
+    button.cta {
+        font-size: 1.2rem; /* Riduce la dimensione del testo del pulsante */
+        padding: 30px 30px; /* Riduce il padding del pulsante */
+        border-radius: 50px;
     }
-
-    .btn-div {
-        position: static;
-        margin-top: 20px; /* Spazio sopra i pulsanti */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px; /* Spazio tra i pulsanti */
-    }
-     button.cta {
-        display: flex;
-        width: 80%;
-        height:50px;
-        max-width: 300px; /* Limita la larghezza massima del pulsante */
-        align-items: center;
-        justify-content: center;
-        
-     }
 
 }
+
+
 /* --- 6.2 Breakpoint max-width: 768px --- */
 @media (max-width: 768px) {
 

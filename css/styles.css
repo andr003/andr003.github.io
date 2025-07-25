@@ -610,6 +610,13 @@ footer {
         border-radius: 50px;
     }
 
+    .navbar nav a {
+    margin: 0 10px; /* Spaziatura tra i pulsanti */
+    padding: 12px 10px; /* Spaziatura interna dei pulsanti */
+    border-radius: 28px; /* Angoli arrotondati */
+
+    }
+
 }
 
 

@@ -58,9 +58,14 @@ $(function () {
         // Imposta il link attivo nella navbar
         setActiveNav(target);
         // Scorri alla sezione in modo fluido
-        $("html, body").animate({
-            scrollTop: $(target).offset().top
-        }, 500);
+        
+        const width = $(window).width();
+        if (width >= 1024) {
+            // autoscrolling per desktop
+            $("html, body").animate({
+                scrollTop: $(target).offset().top
+            }, 500);
+        }
     }
 
     // ====== GESTIONE CAROSELLO ======

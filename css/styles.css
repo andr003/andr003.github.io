@@ -110,6 +110,7 @@ h2 {
 button.cta {
     font-family: var(--font-primary);
     font-size: var(--button-size);
+    font-weight: 600;
     padding: var(--button-padding);
     background: var(--secondary-color);
     color: var(--dark-color);
@@ -117,6 +118,8 @@ button.cta {
     border-radius: 30px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px 40px; /* Padding del pulsante */
+    border-radius: 50px; /* Angoli arrotondati */
 }
 
 button.cta:hover {
@@ -550,12 +553,11 @@ section#contacts {
 
 .contact-cta {
     background-color: var(--primary-color);
-    color: var(--white-color) !important;
+    color: var(--dark-color) !important;
     border: none;
     font-size: 1.1rem;
     padding: 15px 35px;
     border-radius: 8px;
-    font-weight: 600;
     transition: background-color 0.2s ease;
 }
 
@@ -610,9 +612,13 @@ footer {
         border-radius: 50px;
     }
 
+    .navbar {
+        padding: 15px 10px; /* Riduce il padding della navbar */
+    }
+
     .navbar nav a {
     margin: 0 10px; /* Spaziatura tra i pulsanti */
-    padding: 12px 10px; /* Spaziatura interna dei pulsanti */
+    padding: 8px 10px; /* Spaziatura interna dei pulsanti */
     border-radius: 28px; /* Angoli arrotondati */
 
     }
@@ -647,10 +653,170 @@ footer {
         
     }
 
+
+    section#projects {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        max-width: 700px; 
+
+        margin-bottom: 100px;
+        background-color: var(--section-background-color); /* -- */
+
+    }
+    .carousel-caption {
+        padding: 30px; 
+    }
+    footer {
+        padding: 0;
+    }
+
+
+
+
+
 }
 
 
 /* --- 6.2 Breakpoint max-width: 768px --- */
 @media (max-width: 768px) {
+
+    section#home {
+        padding: 20px; /* Riduce il padding della sezione home */
+        text-align: center; /* Centra il testo */
+    }
+    #home h2 {
+        font-size: 40px; /* Riduce la dimensione del titolo */
+        /*tende ad andare a capo*/
+        white-space: normal; /* Permette il ritorno a capo */
+    }
+
+    .home p {
+        font-size: 1.5rem; /* Riduce la dimensione del testo */
+        padding: 0 20px; /* Aggiunge padding orizzontale */
+    }
+    button.cta {
+        display: flex;
+        font-size: 1.2rem; /* Riduce la dimensione del testo del pulsante */
+        padding: 15px 15px; /* Riduce il padding del pulsante */
+        border-radius: 50px;
+        align-items: center; /* Centra il testo del pulsante */
+        justify-content: center;
+    }
+
+    .navbar {
+        padding: 15px 10px; /* Riduce il padding della navbar */
+        flex-direction: column; /* Impila gli elementi verticalmente */
+        align-items: center; /* Centra gli elementi */
+        gap: 20px; /* Spazio tra il logo e i pulsanti */
+    }
+
+    .navbar nav a {
+    margin: 0 10px; /* Spaziatura tra i pulsanti */
+    padding: 8px 10px; /* Spaziatura interna dei pulsanti */
+    border-radius: 28px; /* Angoli arrotondati */
+
+    }
+
+    .logo {
+        display: flex;
+        align-items: center; /* Centra verticalmente il logo e il testo */
+
+    }
+
+    #aboutme {
+        margin-bottom: 100px;
+        padding: 10px 70px 30px 0px;
+        max-width: 400px;
+        padding: 40px 40px 20px 40px; /* Aggiunge padding orizzontale */
+    }
+    .container {
+        width: 100%;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column; /* La foto e il testo si impilano su schermi piccoli */
+        align-items: center; /* Centra gli elementi quando sono impilati */
+        gap: 32px; /* Spazio tra gli elementi */
+    }
+
+    .content-wrapper img {
+        width: 300px; /* Larghezza fissa per l'immagine */
+        height: auto; /* Mantiene le proporzioni dell'immagine */
+        border-radius: 20px; /* Angoli arrotondati per l'immagine */
+    }
+
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        
+    }
+
+
+    section#projects {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        max-width: 500px; 
+
+        margin-bottom: 100px;
+        margin-top: 180px;
+    }
+    
+
+    
+    .carousel-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    }
+
+    .carousel-item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    }
+    .carousel-caption {
+        padding: 30px; 
+    }
+
+    section#contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 400px;
+        padding: 20px 20px 20px 20px;
+        margin-bottom: 100px;
+        margin-top: 10px;
+    }
+
+    .contact-grid {
+        max-width: 500px;
+    }
+
+    .cta-contact {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;}
+
+    button.cta {
+        font-size: 1rem;
+        padding: 8px 35px; /* Riduce il padding del pulsante */
+        border-radius: 60px;
+    }
+    footer {
+        padding: 0;
+    }
 
 }

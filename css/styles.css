@@ -147,13 +147,9 @@ button.cta:hover {
 
 .navbar .logo {
     display: flex;
-    align-items: center; /* Centra verticalmente il logo e il testo */
+    align-items: center; /* Centra verticalmente il testo del logo */
 }
 
-.navbar .logo img {
-    height: 40px; /* Altezza del logo */
-    margin-right: 10px; /* Spazio tra il logo e il testo */
-}
 
 .navbar nav a {
     margin: 0 10px; /* Spaziatura tra i pulsanti */

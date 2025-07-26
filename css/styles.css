@@ -816,3 +816,93 @@ footer {
     }
 
 }
+
+@media (max-width: 480px) {
+    /* Navbar impostata per visualizzare il logo e sotto i quattro link */
+    .navbar {
+        padding: 15px 10px;
+        flex-direction: column; /* Impila gli elementi verticalmente */
+        align-items: center; /* Centra gli elementi */
+        gap: 15px; /* Spazio tra il logo e i link */
+        height: auto; /* Permette alla navbar di espandersi */
+    }
+
+    .navbar .logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px; /* Spazio extra sotto il logo */
+    }
+
+    .navbar nav {
+        display: flex;
+        flex-direction: row; /* Mantiene i link in orizzontale */
+        flex-wrap: wrap; /* Permette il wrap se necessario */
+        justify-content: center; /* Centra i link */
+        gap: 5px; /* Spazio ridotto tra i link */
+    }
+
+    .navbar nav a {
+        margin: 0 5px; /* Riduce lo spazio tra i pulsanti */
+        padding: 6px 8px; /* Riduce il padding interno */
+        border-radius: 20px;
+        font-size: 0.9rem; /* Riduce leggermente la dimensione del testo */
+    }
+
+    .navbar nav a:last-child {
+        margin-right: 5px; /* Rimuove il margin-right eccessivo */
+    }
+
+    /* Aggiusta il margin-top del contenuto principale per compensare l'altezza maggiore della navbar */
+    .main-content {
+        margin-top: 140px; /* Aumenta il margin-top per la navbar più alta */
+    }
+
+
+    button.cta {
+        font-size: 0.9rem; /* Riduce la dimensione del testo del pulsante */
+        padding: 10px 20px; /* Riduce il padding del pulsante */
+        border-radius: 50px;
+    }
+
+    section#aboutme {
+        padding: 20px; /* Riduce il padding della sezione about me */
+        max-width: 350px; /* Permette alla sezione di occupare tutta la larghezza disponibile */
+    }
+
+    section#aboutme .cta {
+        padding: 20px 15px; /* Riduce il padding del pulsante */
+    }
+
+    section#projects {
+        max-width: 380px;
+        padding-bottom: 40px; /* Aggiunge padding inferiore per evitare che il contenuto tocchi il bordo */
+        gap: 40px;
+    }
+
+    section#projects h2 {
+        font-size: 1.5rem; /* Riduce la dimensione del titolo */
+    }
+
+    .carousel-caption {
+        padding-top: 100px;
+    }
+
+    section#contacts {
+        max-width: 350px; /* Permette alla sezione di occupare tutta la larghezza disponibile */
+        padding: 20px; /* Riduce il padding della sezione contatti */
+    }
+
+    section#contacts .contact-cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px; /* Riduce il padding del pulsante di contatto */
+        border-radius: 50px; /* Angoli arrotondati */
+        font-size: 1.1rem; /* Riduce la dimensione del testo del pulsante di contatto */
+    }
+
+    footer {
+        padding: 0; /* Riduce il padding del footer */
+        font-size: 0.7rem; /* Riduce la dimensione del testo del footer */
+    }
+}
